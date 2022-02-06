@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue to do list</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+        <input type="text" placeholder="請輸入待辦事項" @keyup.enter="addtodo(newtodo)" v-model="newtodo">
+        <button id="add" @click="addtodo(newtodo)">add</button>
+        <button id="delete" @click="removeall(todo)">delete all</button>
+        <h2 style="color:purple">事項列表</h2>
+
+        <ul>
+            <li v-for="todo in todos">
+                <input type="checkbox">
+                {{todo.content}}
+                - <a href="#" @click="removetodo(todo)">delete</a>
+            </li>
+        </ul>
+        {{needdo}}件事項未完成!
+    </div>
+
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                todos: [],
+                newtodo: "",
+                num: 0
+            },
+            methods: {
+                addtodo: function (todo) {
+                    this.todos.push({ content: todo, completed: false })
+                    this.num++
+                },
+                removetodo: function (todo) {
+                    this.todos.splice(this.todos.indexOf(todo), 1)
+                    this.num--
+                },
+                removeall: function (todo) {
+                    this.todos.splice(this.todos)
+                    this.num = 0
+                }
+            },
+            computed: {
+                needdo: function () {
+                    return this.num
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

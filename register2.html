@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登入以繼續－使用Atlassian帳戶登入</title>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="style.css">
+<style type="text/css"> 
+
+   .Main2 {
+　padding-bottom: 100px;
+   padding-top: 40px;
+   width:30%;
+   height:500px;
+   background-color: white;
+   position:absolute;
+   left:460px;
+   top:120px;
+   text-align:center;
+   color: #5E5E5E;
+   font-size: 12pt;
+   font-family:Microsoft JhengHei;
+   box-shadow: 1px 1px 1px 1px #D9D9D9;
+}
+
+ 
+    
+    </style>
+    
+</head>
+<body>
+    <div id="all">
+    
+  <img alt="Trello" class="logo" 
+   src="https://d2k1ftgv7pobq7.cloudfront.net/meta/c/p/res/images/trello-header-logos/76ceb1faa939ede03abacb6efacdde16/trello-logo-blue.svg"
+   width="140" height="70" style="display:block; margin:auto;">
+   <div class="Main2"><p  class="account" >註冊帳戶</p>
+    
+        <form><br>
+           <input type="text" name="mail" class="one" 
+           placeholder="輸入電子郵件地址" >
+                  
+                  <input type="text" name="mail" class="two" 
+                  placeholder="輸入全名">
+                  <div class="oh">
+                  <input type="password" name="mail" class="three"  placeholder="建立密碼"
+                  v-model="eyetxt" v-else >
+                  <img :src="seen ? seenImg : unseenImg" @click="changeType()" class="eye_img" /></div>
+                </form>
+                <p  class="agree">註冊後，即表示我接受Atlassian的<a href="cantpass.html"style="text-decoration:none;color:#0052CC;font-size:9pt; font-family:-apple-system;">使用者聲明
+                </a>，並認可<a href="cantpass.html"style="text-decoration:none;color:#0052CC;font-size:9pt; font-family:-apple-system;">隱私權政策
+                    </a>。</p>
+                 <input type="button" value="註冊" name="login"  
+                 class="go" >
+                 <p class="or" >或是</p>
+                 <button type="button" class="google2"><img src="google.png" width="15" height="15">&nbsp使用Google帳號登入</button>
+                 <br>
+                 <button type="button" class="microsoft"><img src="m.png" width="15" height="15">&nbsp以Microsoft繼續</button>
+                 <br><br>
+                 <div class="newline"></div>
+                 <a href="cantpass.html"  class="downline"onclick="location.href='register.html'"  target="_blank" style="text-decoration:none;color:rgb(0,82,204);font-size:10pt; font-family:-apple-system;"><p>已有Atlassian帳戶？登入</p></a>
+                 
+   </div>
+   <div class="center">
+        <form>
+               <select name="YourLocation" class="language">
+                <option value="choose-one" id="choose" disabled="true">請選取語言...</option>
+               　<option value="Taipei">Cestina</option>
+               　<option value="Taoyuan">Deutsch</option>
+               　<option value="Hsinchu">English</option>
+               </select>
+               </form>
+               
+       </div>
+       <div class="line2"></div>
+        <img class="left" 
+         src="left.png" width="340"  height="327">
+         <img class="right" 
+         src="right.png" width="340"  height="290">
+ 
+   <div class="Footer">
+       
+        <img class="atlassian-logo-small blue" 
+        src="https://d2k1ftgv7pobq7.cloudfront.net/meta/c/p/res/images/16006ae28f149063408d601e8c80eddc/atlassian-logo-blue-small.svg" 
+        width="150" style="display:block; margin:auto;">
+       <p class="down" style="font-size:9pt;">透過一個帳戶使用 Trello,Jira,Confluence 及<a href="cantpass.html"style="text-decoration:none;color:#0052CC;font-size:9pt; font-family:-apple-system;">更多</a>產品</p>
+    </div>
+</div>
+</body>
+</html>
