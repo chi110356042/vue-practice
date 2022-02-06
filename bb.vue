@@ -6,8 +6,8 @@
               <span>會員登錄</span>
           </div>
           <div class="main">
-              <input type="text" placeholder="手机号"/>
-              <input :type="pwdType" class="psd" placeholder="密码" maxlength="20"/>
+              <input type="text" placeholder="phine"/>
+              <input :type="pwdType" class="psd" placeholder="password" maxlength="20"/>
               <img :src="openeye" class="eye" alt="" @click="changeType()">
           </div>
         </div>
@@ -17,8 +17,8 @@
         export default {
           data() {
             return {
-              pwdType: 'password', // 密码类型
-              openeye: require('@/assets/beye.png'), //图片地址
+              pwdType: 'password', 
+              openeye: require('@/assets/beye.png'), //圖片位址
             }
           },
           methods: {
